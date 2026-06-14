@@ -24,7 +24,7 @@
 ## Agent / repo hygiene
 
 - [Agent Skills spec](https://agentskills.io)
-- BrewHub `AGENT-ARCHITECTURE.md` — markdown vs enforced rules
+- your `AGENT-ARCHITECTURE` doc — markdown vs enforced rules
 
 ## Commercial books (purchase; summarize only)
 

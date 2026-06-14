@@ -68,7 +68,7 @@ See [references/specialist-fleet.md](references/specialist-fleet.md) for all eig
 | `twilio-elevenlabs-resend-specialist` | Fail-soft comms helpers |
 | `raspberry-pi-specialist` | Thin LAN client hooks |
 | `coolify-hetzner-specialist` | Deploy/runbook structure |
-| BrewHub `testing` skill | Playwright, Jest, function tests |
+| Your `testing` skill | Playwright, Jest, function tests |
 
 ## Book-to-skill
 
