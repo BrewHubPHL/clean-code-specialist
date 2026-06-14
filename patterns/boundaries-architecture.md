@@ -40,13 +40,53 @@ In practice for BrewHub-style stacks: **Postgres RPC + handlers are the inner ri
 - Handler imports from `src/components/`
 - Python tool imports Next.js module
 - Shared `types.ts` that pulls in half the monorepo
+- **Train wrecks** — `ctx.getCustomer().getAddress().getZip()` chains through strangers
+
+## Law of Demeter
+
+A method should talk to **friends**, not strangers:
+
+- OK: `order.getTotal()` on an object you own or were passed
+- Avoid: reaching through two+ getters to call a method on a distant object
+
+Refactor train wrecks with a method on the right object (`customer.getZip()`) or a narrow query at the boundary.
+
+## Data vs objects
+
+| | Objects | Data structures |
+|---|---------|-----------------|
+| Expose | Behavior (methods) | Data (fields) |
+| Hide | Implementation | — |
+| Adding a **type** | Change every function | No function changes |
+| Adding a **function** | Change every type | One new function |
+
+Pick one model per type — **hybrids** (half object, half struct) get both downsides.
+
+- **DTOs** — public fields OK on wire/boundary structs; not domain cores
+- **Active Record** — persistence mixed with entity; isolate behind a port if used
+- **Abstraction** — `getPercentFuelRemaining()` beats raw gallon getters bolted on
+
+## Third-party boundaries
+
+Wrap vendor SDKs in **one adapter module** — domain never imports Stripe/Twilio/Supabase types directly.
+
+| Technique | When |
+|-----------|------|
+| **Learning tests** | Before committing to a library — pin behavior you depend on |
+| **Interface-first** | Dep doesn't exist yet — design your port, stub until real impl arrives |
+| **Minimal surface** | Expose only what the app needs; upgrade pain stays in the adapter |
+
+Learning tests fail early when a vendor upgrade changes semantics — cheaper than production surprises.
 
 ## Modules
 
 - **High cohesion** — files that change together live together.
 - **Acyclic imports** — break cycles with a port interface or move shared types to a leaf package.
+- **Many small modules** — one responsibility beats a god class; compose at the edge.
+- **Newspaper order** — public API at top of file, privates below.
 
 ## References
 
+- *Clean Code* — Ch. 6, 8, 10 (`references/book-summaries/cc-ch06-objects-data.md`, `cc-ch08-boundaries.md`, `cc-ch10-classes.md`)
 - *Clean Architecture* (Martin) — summarize in `book-summaries/`
 - *A Philosophy of Software Design* — Ch. 4–6 on complexity

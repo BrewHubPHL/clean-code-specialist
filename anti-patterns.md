@@ -9,6 +9,8 @@
 | Business rules only in UI | Bypassed by API, LLM tools, webhooks | Enforce at DB/RPC/handler SSOT |
 | `catch (e) {}` / swallowed errors | Silent money and auth bugs | Log + track; rethrow or mapped domain errors |
 | Refactor without tests on hot path | Regressions ship | Characterization test first; then refactor |
+| "We'll clean it up later" | **LeBlanc's law:** later equals never; mess compounds | Boy Scout rule on every touch; never defer cleanup you can do now |
+| Grand redesign in the sky | Rewrite races maintenance; often fails for same reasons | Incremental refactor with tests; no parallel greenfield rescue |
 
 ## HIGH
 
@@ -30,3 +32,5 @@
 | Javadoc on every getter | Document invariants at boundary only |
 | Premature micro-optimization | Measure; readability wins until profile says otherwise |
 | `# TODO: fix later` in money path | Ticket + enforcement or fix now |
+| Noise comments (closing braces, position markers) | Delete; fix structure or names instead |
+| Train-wreck accessors (`a.getB().getC().doX()`) | Law of Demeter — add method on the right object |

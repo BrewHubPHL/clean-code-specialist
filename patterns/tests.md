@@ -3,6 +3,34 @@
 **Impact:** HIGH  
 **Tags:** testing, tdd, first
 
+Tests enable the **-ilities** — flexibility, maintainability, refactorability. Without them, "clean up" is gambling.
+
+## Three Laws of TDD
+
+1. No production code until you have a **failing** test
+2. Write only enough test to **fail** (compile failures count)
+3. Write only enough production code to **pass**
+
+Then refactor. Repeat.
+
+## Clean tests
+
+Test code is as important as production code — **dirty tests rot** and get ignored. Clarity beats DRY in tests; duplication is OK if it aids readability.
+
+**Dual standard:** tests may be more verbose than production when that makes the spec obvious.
+
+## Test DSL
+
+Build a **domain-specific testing language** — helpers that express intent:
+
+```typescript
+await givenUserWithCart({ items: 2 });
+await whenCheckout();
+await expectOrderTotal(42.00);
+```
+
+Readers should learn intended behavior from test names and helpers alone.
+
 ## F.I.R.S.T.
 
 | Letter | Meaning |
@@ -47,5 +75,5 @@ Coverage is a **lagging indicator**. Required: money path, auth, webhooks. Skip 
 
 ## References
 
-- *Clean Code* — Ch. 9 Unit Tests
+- *Clean Code* — Ch. 9 Unit Tests (`references/book-summaries/cc-ch09-tests.md`)
 - BrewHub `.agents/skills/testing/SKILL.md` for project conventions
