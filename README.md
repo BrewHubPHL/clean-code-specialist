@@ -18,6 +18,21 @@ npx skills add brewhubphl/clean-code-specialist
 - `references/book-summaries/` — chapter summaries you author (no copyrighted PDFs)
 - `examples/brew-hub-integration.md` — abstract layering for hybrid stacks
 
+## Related specialists
+
+Full fleet index: [references/specialist-fleet.md](references/specialist-fleet.md)
+
+| Repo | Domain |
+|------|--------|
+| [supabase-specialist](https://github.com/brewhubphl/supabase-specialist) | Postgres, RLS, migrations |
+| [nextjs-specialist](https://github.com/brewhubphl/nextjs-specialist) | App Router, Server Actions, `use cache` |
+| [cloudflare-specialist](https://github.com/brewhubphl/cloudflare-specialist) | Workers, wrangler, Zero Trust |
+| [coolify-hetzner-specialist](https://github.com/brewhubphl/coolify-hetzner-specialist) | Coolify, Hetzner, tunnels |
+| [python-ai-agents-specialist](https://github.com/brewhubphl/python-ai-agents-specialist) | ADK, MCP, Python tools |
+| [raspberry-pi-specialist](https://github.com/brewhubphl/raspberry-pi-specialist) | Pi edge, LAN APIs |
+| [capacitor-mobile-specialist](https://github.com/brewhubphl/capacitor-mobile-specialist) | iOS/Android shell |
+| [twilio-elevenlabs-resend-specialist](https://github.com/brewhubphl/twilio-elevenlabs-resend-specialist) | Email, SMS, TTS |
+
 ## Validate locally
 
 ```bash

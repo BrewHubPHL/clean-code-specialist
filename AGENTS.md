@@ -9,10 +9,14 @@ Navigation for `clean-code-specialist`.
 3. `anti-patterns.md` before large refactors
 4. `examples/brew-hub-integration.md` for BrewHub layering context
 
+## Specialist fleet
+
+All BrewHub open skills: [references/specialist-fleet.md](references/specialist-fleet.md) (8 domain repos + this one).
+
 ## Pair with
 
-- Domain specialists (`supabase-specialist`, `square-payments`) — **where** logic must live
-- `testing` skill — test shape after refactor
+- Domain specialists — **where** logic must live (`supabase-specialist`, `nextjs-specialist`, etc.)
+- BrewHub `.agents/skills/testing/` — test shape after refactor
 
 ## Book ingestion
 

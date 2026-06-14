@@ -13,6 +13,7 @@ const REQUIRED = [
   'patterns/comments-documentation.md',
   'examples/brew-hub-integration.md',
   'references/official-docs-links.md',
+  'references/specialist-fleet.md',
   'references/book-summaries/README.md',
 ];
 

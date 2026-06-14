@@ -42,6 +42,7 @@ Guidance for **readable, changeable code** in polyglot stacks (TypeScript/React,
 | Mistakes | [anti-patterns.md](anti-patterns.md) |
 | Abstract product wiring | [examples/brew-hub-integration.md](examples/brew-hub-integration.md) |
 | Book chapter drops | `references/book-summaries/` |
+| Other fleet repos | [references/specialist-fleet.md](references/specialist-fleet.md) |
 | Links | [references/official-docs-links.md](references/official-docs-links.md) |
 
 ## Core principles
@@ -55,13 +56,19 @@ Guidance for **readable, changeable code** in polyglot stacks (TypeScript/React,
 
 ## Integration
 
+See [references/specialist-fleet.md](references/specialist-fleet.md) for all eight domain repos and install commands.
+
 | Skill | Handoff |
 |-------|---------|
 | `supabase-specialist` | Push invariants to RLS/RPC instead of "clean" app-only checks |
-| `netlify-functions` | Handler shape, auth gates, error capture |
 | `nextjs-specialist` | Server Actions vs routes; component boundaries |
+| `cloudflare-specialist` | Worker handler shape; wrangler config clarity |
 | `python-ai-agents-specialist` | Tool surfaces, ADK module layout |
-| `testing` (BrewHub) | Playwright, Jest, function tests |
+| `capacitor-mobile-specialist` | Native vs web import gates |
+| `twilio-elevenlabs-resend-specialist` | Fail-soft comms helpers |
+| `raspberry-pi-specialist` | Thin LAN client hooks |
+| `coolify-hetzner-specialist` | Deploy/runbook structure |
+| BrewHub `testing` skill | Playwright, Jest, function tests |
 
 ## Book-to-skill
 

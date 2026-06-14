@@ -36,6 +36,8 @@ Capacitor UI ──▶ Next.js static / hooks
 
 ## When this skill defers
 
+See [references/specialist-fleet.md](../references/specialist-fleet.md) for install links to all eight domain specialists.
+
 - Postgres index DDL → `supabase-specialist`
 - Wrangler bindings → `cloudflare-specialist`
 - Square idempotency contract → `square-payments` skill
