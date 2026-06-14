@@ -13,7 +13,7 @@ UI (React) → application services → domain rules → ports
                               adapters (DB, HTTP, queue)
 ```
 
-In practice for BrewHub-style stacks: **Postgres RPC + handlers are the inner ring** for money and permissions; UI is a thin interpreter.
+In practice: **Postgres RPC + handlers are the inner ring** for money and permissions; UI is a thin interpreter.
 
 ## SOLID (practical subset)
 

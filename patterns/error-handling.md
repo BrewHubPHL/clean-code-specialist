@@ -70,7 +70,7 @@ Translate low-level errors at the edge:
 
 - Never catch-and-ignore on payment webhooks
 - Idempotency before retry
-- `logSystemError` + PostHog on critical paths (BrewHub convention)
+- `logSystemError` + analytics on critical paths (a useful convention)
 
 ## Validation
 

@@ -16,8 +16,14 @@ All BrewHub open skills: [references/specialist-fleet.md](references/specialist-
 ## Pair with
 
 - Domain specialists — **where** logic must live (`supabase-specialist`, `nextjs-specialist`, etc.)
-- BrewHub `.agents/skills/testing/` — test shape after refactor
+- your project's testing skill/conventions — test shape after refactor
 
 ## Book ingestion
 
 Add `references/book-summaries/<slug>.md` using the template in that folder. Promote durable rules into `patterns/`.
+
+## Operating principles
+
+The fleet-wide philosophy (zero-trust the client, fail closed, idempotency on the money
+path, etc.) lives in [PRINCIPLES.md](PRINCIPLES.md). Apply it on top of the domain
+patterns in this repo.

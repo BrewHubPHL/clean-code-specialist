@@ -43,7 +43,7 @@ Skip JSDoc on obvious private helpers.
 
 ## Markdown vs code
 
-Per BrewHub `AGENT-ARCHITECTURE.md`: rules that must hold need **enforcement in code** — docs are the index. Comment "never trust client price" without `_pricing.js` is a wish.
+Rules that must hold need **enforcement in code** — docs are the index. Comment "never trust client price" without `_pricing.js` is a wish.
 
 ## API docs
 

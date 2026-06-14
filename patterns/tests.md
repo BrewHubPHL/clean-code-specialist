@@ -76,4 +76,4 @@ Coverage is a **lagging indicator**. Required: money path, auth, webhooks. Skip 
 ## References
 
 - *Clean Code* — Ch. 9 Unit Tests (`references/book-summaries/cc-ch09-tests.md`)
-- BrewHub `.agents/skills/testing/SKILL.md` for project conventions
+- your project's testing skill for project conventions
